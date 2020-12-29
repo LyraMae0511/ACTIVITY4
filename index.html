@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body,html{
+    background-image:url("Galaxy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.start{
+background-color:#efffb5;
+width:100px;
+padding:5px 5px 5px 5px;
+color:black;
+}
+input{
+    margin-top:0px;
+margin-left:0px;
+}
+</style>
+
+    <script>
+function signs(){
+        var mn=forms.month.value;
+        var day=parseFloat(forms.day.value);
+        if(mn=="January"){
+            if(day<32){document.getElementById("output").innerHTML="AQUARIUS";}
+            else{document.getElementById("output").innerHTML="Capricornus";}
+        }
+        else if(mn=="February"){
+            if(day<19){document.getElementById("output").innerHTML="AQUARIUS";}
+            else{document.getElementById("output").innerHTML="Pisces";}
+        }
+        else if(mn=="March"){
+            if(day<21){document.getElementById("output").innerHTML="PISCES";}
+            else{document.getElementById("output").innerHTML="Aries";}
+        }
+        else if(mn=="April"){
+            if(day<20){document.getElementById("output").innerHTML="ARIES";}
+            else{document.getElementById("output").innerHTML="Taurus";}
+        }
+        else if(mn=="May"){
+            if(day<21){document.getElementById("output").innerHTML="TAURUS";}
+            else{document.getElementById("output").innerHTML="Gemini";}
+        }
+        else if(mn=="June"){
+            if(day<22){document.getElementById("output").innerHTML="GEMINI";}
+            else{document.getElementById("output").innerHTML="Cancer";}
+        }
+        else if(mn=="July"){
+            if(day<23){document.getElementById("output").innerHTML="CANCER";}
+            else{document.getElementById("output").innerHTML="Leo";}
+        }
+        else if(mn=="August"){
+            if(day<23){document.getElementById("output").innerHTML="LEO";}
+            else{document.getElementById("output").innerHTML="Virgo";}
+        }
+        else if(mn=="September"){
+            if(day<23){document.getElementById("output").innerHTML="VIRGO";}
+            else{document.getElementById("output").innerHTML="Libra";}
+        }
+        else if(mn=="October"){
+            if(day<24){document.getElementById("output").innerHTML="LIBRA";}
+            else{document.getElementById("output").innerHTML="Scorpius";}
+        }
+        else if(mn=="November"){
+            if(day<22){document.getElementById("output").innerHTML="SCORPIO";}
+            else{document.getElementById("output").innerHTML="Sagittarius";}
+        }
+        else if(mn=="December"){
+            if(day<22){document.getElementById("output").innerHTML="SAGITTARIUS";}
+            else if(day>21){document.getElementById("output").innerHTML="Capricorn";}
+        }
+        else {alert("Invalid Input");
+        
+     }   }
+     
+    </script>
+<body>
+<h1 style="font-size:60px; margin-bottom: auto;" align="center">DO YOU WANT TO KNOW YOUR ZODIAC SIGN?</h1>
+<form name="forms" align="center">
+<input type="text" name="Month" id="month" placeholder="Birth Month:"/><br><br>
+<input type="number" name="Month" id="day"/>
+<br><br>
+<input type="button" class="start" id="start" value="Enter" onclick="signs()"/>
+<p style="font-size: 50px"> Here is your zodiac sign:</p>
+<p id="output" style="font-size: 55px;"></p>
+</form>
+</body>
+</html>
